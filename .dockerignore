@@ -1,0 +1,11 @@
+config.xml
+*.log
+secrets.log
+app.db
+data/
+
+target/
+.git/
+.idea/
+.vscode/
+*.jar

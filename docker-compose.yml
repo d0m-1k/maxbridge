@@ -1,0 +1,17 @@
+services:
+  maxbridge:
+    image: maxbridge:latest
+    build: .
+    container_name: maxbridge
+    restart: unless-stopped
+    user: "${APP_UID:-1000}:${APP_GID:-1000}"
+    environment:
+      JAVA_OPTS: "-Xmx256m"
+      TZ: "Europe/Moscow"
+    volumes:
+      - ./data:/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
