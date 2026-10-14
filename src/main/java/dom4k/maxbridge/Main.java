@@ -24,7 +24,7 @@ public class Main {
     public static void main(String[] args) throws TelegramApiException {
         loadConfig();
 
-        if (get("token") == null) throw new RuntimeException("ТЫ ДОЛБАЕБ, BOT TOKEN IS NULL (https://t.me/NPE4u)!!!");
+        if (get("token") == null) throw new RuntimeException("ТЫ ДОЛБАЕБ, BOT TOKEN IS NULL!!!");
 
         Bot bot = new Bot(get("token"));
 
